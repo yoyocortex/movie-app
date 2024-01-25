@@ -1,38 +1,190 @@
-.App {
+body {
+  background-color: rgb(15, 15, 15)!important;
+  color: white!important;
+}
+
+.movie-app {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.rowski {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: flex-start;
+}
+
+.poster {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  padding: 2vh;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.poster:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.poster-image {
+  position: relative;
+  border: none;
+  transition: all 0.5s;
+    &:hover {
+      border-radius: 5%;
+    }
+}
+
+.fav-btn {
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(15, 15, 15);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.fav-btn svg {
+  transition: transform 0.5s;
+}
+
+.fav-btn:hover svg {
+  transform: scale(115%);
+}
+
+.fav-btn:hover {
+  box-shadow: 0 0 15px rgb(15, 15, 15);
+}
+
+.svg-icon path {
+
+  fill: white;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+  width: 100%;
+}
+
+.title {
+  padding: 0vh 5vh 0vh 5vh;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0vh 8vh 0vh 8vh;
+  width: 100%;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: white;
+  border: none;
+  color: rgb(15, 15, 15);
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  width: 100%;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover, .search__input:focus {
+  box-shadow: 0 0 1em rgb(131, 131, 131);
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: white;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: rgb(15, 15, 15);
+}
+
+.container {
+  margin: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navigation {
+  background-color: rgb(15, 15, 15);
+  box-shadow: 0 0 2em rgb(0, 0, 0);
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.site-title {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation a {
+  color: inherit;
+  text-decoration: none!important;
+  color: white!important;
+  height: 100%;
+  display: flex;
+  padding: .25rem;
+}
+
+.navigation li.active {
+  border-radius: 5px;
+  box-shadow: 0 0 7px 7px rgb(10, 10, 10);
+  background-color: rgb(10, 10, 10);
+  text-decoration: none!important;
+  color: white!important;
+}
+
+.navigation li {
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: white!important;
+}
+
+.navigation li:hover {
+  transform: scale(110%);
+  border-radius: 5px;
+  box-shadow: 0 0 7px 7px rgb(10, 10, 10);
+  background-color: rgb(10, 10, 10);
+  text-decoration: none!important;
+  color: white!important;
 }
